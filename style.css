@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+.overlay{
+    display: flex;
+    position: absolute;
+    top : 80%;
+    right: 0;
+    left : 0;
+    min-width: 100%;
+    align-items: center;
+    padding : 20px;
+    justify-content: space-between;
+    color : rgb(16, 15, 15);
+    z-index: 2
+}
+
+@media (max-width : 800px){
+    .overlay{
+        flex-direction: column;
+    }
+}
+
+.videoContainer{
+    min-width: 100vw;
+}
+
+.container{
+    min-width: 100vw;
+}
+
+.heroVideo{
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    min-width: 100vw;
+    object-fit: cover;
+    box-shadow: none;
+}
+
+.slidersText{
+    display: flex;
+    align-items: center;
+}
+
+.slideText{
+    padding : 10px;
+    color : white;
+}
+
+.arrowContainer{
+    color : white;
+}
+
+.fa-arrow-left{
+    padding : 0px 40px;
+    font-size: 30px;
+}
+
+.fa-arrow-right{
+    padding : 0px 40px;
+    font-size: 30px;
+}
+
+
+#navBarContainer{
+    position: fixed;
+    top : 0;
+    left: 0;
+    right: 0;
+    height : 10vh;
+    z-index: 1000;
+    padding : 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 1s linear;
+}
+
+#navBarContainer:hover{
+    background-color: black;
+}
+
+.centerLink{
+    color : white;
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+
+.centerLink:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+
+.hamburgerMenuBar{
+    width : 60px;
+    height : 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+#birdClose{
+    font-size: 30px;
+}
+
+
+.headerImg{
+    width : 200px
+}
+
+.destinationSection{
+    position: absolute;
+    right: 0;
+    left : 0;
+    padding-top: 13vh;
+    background-color: white;
+    height: 100vh;
+    min-width: 100%;
+    z-index : 700;
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    
+}
+
+.figureCaption{
+    color : rgb(0, 191, 255);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.placesLinks ul {
+    list-style: none;
+}
+
+.placesLinks ul li{
+    padding: 10px;
+}
+.placesLinks ul li a{
+    text-decoration: none;
+    color : black;
+    font-size: 18px;
+    font-weight: light;
+    font-family: Roboto;
+}
+.sidebarContainer{
+    position: fixed;
+    top : 0;
+    right : 0;
+    background-color: rgb(255, 255, 255 , 0.1);
+    height: 100vh;
+    width : 250px;
+    z-index: 1001;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.sidebarContainer ul{
+    list-style-type: none;
+    padding: 30px 0px;
+}
+
+.sidebarContainer  ul li{
+    width: 100%;
+    padding: 10px;
+
+}
+.sidebarContainer  ul li a{
+    text-decoration: none;
+    color : black;
+    font-family: Roboto;
+    font-weight: bolder;
+}
+
+.sidebarContainer  ul li a:hover{
+    font-size: larger;
+    color : white
+}
+
+.crossContainer{
+    margin-left: 200px;
+}
+
+
+.hideClass{
+    display: none;
+}
+
+.colorBlack{
+    background-color: black;
+}
