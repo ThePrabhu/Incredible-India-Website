@@ -105,4 +105,4 @@ prevBtn.addEventListener("click", () => changeVideo("prev"));
 // OPTIONAL: auto slide every 7 seconds
 setInterval(() => {
   changeVideo("next");
-}, 7000);
+}, 20000);
