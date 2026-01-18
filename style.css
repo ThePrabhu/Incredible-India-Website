@@ -6,102 +6,59 @@
     box-sizing: border-box;
 }
 
-.overlay{
-    display: flex;
-    position: absolute;
-    top : 80%;
-    right: 0;
-    left : 0;
-    min-width: 100%;
-    align-items: center;
-    padding : 20px;
-    justify-content: space-between;
-    color : rgb(16, 15, 15);
-    z-index: 2
+html {
+    font-size: 62.5%;
 }
 
-@media (max-width : 800px){
-    .overlay{
-        flex-direction: column;
-    }
-}
+/* header{
+    position: relative;
+} */
 
-.videoContainer{
-    min-width: 100vw;
-}
-
-.container{
-    min-width: 100vw;
-}
-
-.heroVideo{
-    position: absolute;
-    inset: 0;
-    height: 100vh;
-    min-width: 100vw;
-    object-fit: cover;
-    box-shadow: none;
-}
-
-.slidersText{
-    display: flex;
-    align-items: center;
-}
-
-.slideText{
-    padding : 10px;
-    color : white;
-}
-
-.arrowContainer{
-    color : white;
-}
-
-.fa-arrow-left{
-    padding : 0px 40px;
-    font-size: 30px;
-}
-
-.fa-arrow-right{
-    padding : 0px 40px;
-    font-size: 30px;
-}
-
-
+/* placing NavBar  */
 #navBarContainer{
     position: fixed;
     top : 0;
     left: 0;
     right: 0;
     height : 10vh;
+    width: 100vw;
     z-index: 1000;
-    padding : 10px 40px;
+    padding : 1rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: background-color 1s linear;
 }
 
-#navBarContainer:hover{
+/*adding Hover to the Navbar*/
+#navBarContainer:hover{       
     background-color: black;
 }
 
+
+/* styling header image */
+.headerImg{
+    width : 20rem;
+}
+
+
+ /* desination drop down text */
 .centerLink{
     color : white;
-    font-size: 20px;
+    font-size: 2rem;
     font-family: 'Roboto';
+    cursor: pointer;
 }
 
 .centerLink:hover{
     color: red;
-    cursor: pointer;
 }
 
 
-
+/* hamburger menu bar styling */
 .hamburgerMenuBar{
-    width : 60px;
-    height : 60px;
+    width : 6rem;
+    height : 6rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -110,50 +67,55 @@
     cursor: pointer;
 }
 
-
 #birdClose{
-    font-size: 30px;
+    font-size: 3rem;
+}
+
+@media (max-width : 37.5rem){
+    #navBarContainer{
+        padding: 1rem;
+    }
+    .headerImg{
+    width : 10rem;
+    }
+    .centerLink{
+    font-size: 1.5rem;
+    }
+    .hamburgerMenuBar{
+    width : 4rem;
+    height : 4rem;
+    border-radius: 50%;
+    }
+    #birdClose{
+    font-size: 2rem;
+}
+
+}
+
+@media (max-width : 21.875rem){
+    #navBarContainer{
+        padding: 0rem 0rem;
+    }
+    .headerImg{
+    width : 9rem;
+    }
+    .centerLink{
+    font-size: 1rem;
+    }
+    .hamburgerMenuBar{
+    width : 3rem;
+    height : 3rem;
+    border-radius: 50%;
+    }
+    #birdClose{
+    font-size: 1rem;
+}
+
 }
 
 
-.headerImg{
-    width : 200px
-}
 
-.destinationSection{
-    position: absolute;
-    right: 0;
-    left : 0;
-    padding-top: 13vh;
-    background-color: white;
-    height: 100vh;
-    min-width: 100%;
-    z-index : 700;
-    display: grid;
-    grid-template-columns: repeat(6 , 1fr);
-    
-}
-
-.figureCaption{
-    color : rgb(0, 191, 255);
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.placesLinks ul {
-    list-style: none;
-}
-
-.placesLinks ul li{
-    padding: 10px;
-}
-.placesLinks ul li a{
-    text-decoration: none;
-    color : black;
-    font-size: 18px;
-    font-weight: light;
-    font-family: Roboto;
-}
+/* sidebar styling */
 .sidebarContainer{
     position: fixed;
     top : 0;
@@ -173,31 +135,188 @@
 
 .sidebarContainer ul{
     list-style-type: none;
-    padding: 30px 0px;
+    padding: 3rem 0px;
 }
 
 .sidebarContainer  ul li{
     width: 100%;
-    padding: 10px;
-
+    padding: 1rem;
 }
 .sidebarContainer  ul li a{
     text-decoration: none;
     color : black;
     font-family: Roboto;
     font-weight: bolder;
+    font-size: 2rem;
 }
 
 .sidebarContainer  ul li a:hover{
-    font-size: larger;
+    font-size: 2.5rem;
     color : white
 }
 
-.crossContainer{
-    margin-left: 200px;
+                   /* styling hero section */
+    
+.hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* smooth fade for video slider */
+.heroVideo {
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+
+.heroVideo.fade {
+  opacity: 0;
 }
 
 
+
+.heroVideo{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    display: flex;
+    position: absolute;
+    top : 80%;
+    right: 0;
+    left : 0;
+    min-width: 100%;
+    align-items: center;
+    padding : 2rem;
+    justify-content: space-between;
+    color : rgb(16, 15, 15);
+    z-index: 2
+}
+
+
+
+.slidersText{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.slideText{
+    padding : 1rem;
+    color : white;
+}
+
+.arrowContainer{
+    color : white;
+}
+
+.fa-arrow-left{
+    padding : 0px 4rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.fa-arrow-right{
+    padding : 0px 4rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media (max-width : 50rem){
+    .overlay{
+        flex-direction: column;
+    }
+    .slidersText{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width : 31.25rem){
+    .slidersText{
+        font-size: 1rem;
+    }
+    .overlay{
+        padding: 1rem;
+    }
+}
+@media (max-width : 23.75rem){
+    .slidersText{
+        align-items: flex-end;  
+    }
+    .slideText{
+    padding : 0rem;
+    display: none; 
+    }
+    .fa-arrow-right,.fa-arrow-left{
+        padding : 0rem 2rem;
+        font-size: 2rem;
+    }
+}
+
+/** destination drop down */
+
+.destinationSection{
+    position : fixed;
+    top : 10vh;
+    left : 0;
+    background-color: white;
+    min-width: 100%;
+    max-height: calc(100vh - 10vh);  /*  responsive height */
+    overflow-y: auto;        
+    z-index : 700;
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    
+}
+
+.figureCaption{
+    color : rgb(0, 191, 255);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.placesLinks ul {
+    list-style: none;
+}
+
+.placesLinks ul li{
+    padding: 1rem;
+}
+.placesLinks ul li a{
+    text-decoration: none;
+    color : black;
+    font-size: 1.8rem;
+    font-weight: light;
+    font-family: Roboto;
+}
+
+
+@media (max-width : 56.25rem){
+    .destinationSection{
+        text-align: center;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: repeat((2 , 1fr));
+        height: auto;
+        overflow: auto;
+        
+    }
+}
+
+@media (max-width : 30.625rem){
+    .destinationSection{
+        text-align: center;
+        grid-template-columns: repeat(2 , 1fr);
+        
+    }
+}
+
+
+ /* utility clases */
 .hideClass{
     display: none;
 }
